@@ -1,30 +1,40 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+<div class="main">
+    <app-navbar></app-navbar>
+    <app-intro></app-intro>
+    <app-body></app-body>
+</div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+//Imports
+import Navbar from './components/Navbar';
+import Intro from './components/Intro';
+import Body from './components/Body';
+
+export default {
+    components: {
+        'app-navbar': Navbar,
+        'app-intro': Intro,
+        'app-body': Body
+    }
+}
+</script>
+
+<style>
+body {
+    margin: 0;
+    background-color: rgb(227, 221, 221);
 }
 
-#nav {
-  padding: 30px;
+.main {}
 
-  a {
-    font-weight: bold;
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
     color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+    margin: -0px !important;
 }
 </style>
