@@ -27,8 +27,6 @@ body {
     background-color: rgb(227, 221, 221);
 }
 
-.main {}
-
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
